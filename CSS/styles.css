@@ -318,10 +318,6 @@ a {
     background-color: #ccc!important
 }
 
-
-
-
-
 .bar .bar-item {
     padding: 8px 16px;
     float: left;
@@ -441,6 +437,8 @@ a {
     -ms-transform: translate(-0%,-50%)
 }
 
+.serif{font-family:serif}
+
 .text-white,.hover-text-white:hover {
     color: #fff!important
 }
@@ -485,6 +483,14 @@ a {
     position: absolute;
     left: 0;
     bottom: 0
+}
+
+.leftbar {
+    border-left:6px solid #ccc
+}
+
+.left-align {
+    text-align:left
 }
 
 .text-grey,.hover-text-grey:hover,.text-gray,.hover-text-gray:hover {
@@ -540,15 +546,21 @@ a {
     opacity: 0.9;
 }
 
-.container {
+.container,
+.panel {
     padding: 0.01em 16px
+}
+
+.panel {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .center {
     text-align: center!important
 }
 
-.row-padding, .row-padding > .col, .row-padding>.third {
+.row-padding, .row-padding > .col, .row-padding>.third, .row-padding>.half {
     padding: 0 8px;
 }
 
@@ -567,7 +579,9 @@ a {
     clear: both
 }
 
-.col, .third {
+.col, 
+.third,
+.half {
     float: left;
     width: 100%
 }
@@ -659,9 +673,30 @@ a {
     border: 1px solid #ccc!important
 }
 
+.quote {
+    background-color: #254e7c;
+    font-size: 20px;
+}
+
+.name {
+    font-size: 20px;
+}
 
 
+@media (max-width: 601px) {
 
+    .quote {
+        text-align: center;
+        border-top:6px solid #ccc;     
+
+    }
+
+    .leftbar {
+        border-left: none;
+    }
+
+
+}
 
 
 
@@ -685,6 +720,22 @@ a {
 
     .col.m4,.third {
         width: 33.33333%
+    }
+
+    .half {
+        width: 49.99999%;
+    }
+
+
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .quote {
+        font-size: 20px;
+    }
+
+    .name {
+        font-size: 14px
     }
 }
 

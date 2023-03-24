@@ -250,7 +250,7 @@ h1,h2,h3,h4,h5,h6 {
 
 hr {
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 15px solid #eee;
     margin: 20px 0
 }
 
@@ -661,12 +661,13 @@ a {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 }
 
+
 .input {
     padding: 8px;
     display: block;
     border: none;
     border-bottom: 1px solid #ccc;
-    width: 100%
+    width: 100%;
 }
 
 .border {
@@ -682,6 +683,25 @@ a {
     font-size: 20px;
 }
 
+.image-link {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #254e7c;;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.a-link {
+    text-decoration: none;
+}
+
+.image-link:hover {
+    background-color: #4bb3e1;
+    color: #000;
+}
 
 @media (max-width: 601px) {
 

@@ -22,7 +22,7 @@ if (isset($_POST['Email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "keith.heffington@gmail.com";
-    $email_subject = "Contact from WebSite";
+    $email_subject = "Contact from KH WEB DESIGNS";
 
     function problem($error)
     {
@@ -87,54 +87,66 @@ if (isset($_POST['Email'])) {
 ?>
 
     <!-- include your success message below -->
-    <body class="bg-grey">
+    <body>
     <!-- Icon bar (Sidebar - hidden on small screen) -->
-    <nav class="sidebar bar-block text-12 hide-small center">
-        <img src="Images/Keith_Image.png" alt="Avatar" class="image-width">
-        <a href="default.html" class="bar-item button padding-large light-grey">
-            <i class="fas fa-home text-36"></i>
-            <p>HOME</p>
-        </a>
-        <a href="default.html#ABOUT" class="bar-item button padding-large light-grey">
-            <i class="fas fa-user text-36"></i>
-            <p>ABOUT</p>
-        </a>
-        <a href="default.html#PROJECTS" class="bar-item button padding-large light-grey">
-            <i class="fas fa-eye text-36"></i>
-            <p>PROJECTS</p>
-        </a>
-        <a href="default.html#CONTACT" class="bar-item button padding-large light-grey">
-            <i class="fas fa-envelope text-36"></i>
-            <p>CONTACT</p>
-        </a>
-    </nav>
-    <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <div class="top hide-large hide-medium" id="myNavbar">
-         <div class="bar light-grey opacity hover-opacity-off center small">
-            <a href="default.html" class="bar-item button bar-item-width">HOME</a>
-            <a href="default.html#ABOUT" class="bar-item button bar-item-width">ABOUT</a>
-            <a href="default.html#PROJECTS" class="bar-item button bar-item-width">PROJECTS</a>
-            <a href="default.html#CONTACT" class="bar-item button bar-item-width">CONTACT</a>
-         </div>
+    <div class="top">
+  <div class="bar white card" id="myNavbar">
+    <a href="index.html#home" class="bar-item wide"><img src="IMG/KHlogoSM.PNG" alt="KHLogo" class="img-width"></a>
+    <!-- Right-sided navbar links -->
+    <div class="right hide-small padding-24">
+      <a href="index.html#about" class="bar-item button">ABOUT</a>
+      <a href="index.html#team" class="bar-item button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="index.html#work" class="bar-item button"><i class="fa fa-th"></i> WORK</a>
+      <a href="index.html#pricing" class="bar-item button"><i class="fa fa-usd"></i> PRICING</a>
+      <a href="index.html#contact" class="bar-item button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
-    <!-- Page Container -->
-    <div class="padding-large" id="main">
-        <!-- Header/Home -->
-        <header class="container padding-32 center text-light-grey" id="HOME"> 
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sideBarOpen()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="sideBarItemClose()" class="bar-item button large padding-16">Close ×</a>
+  <a href="index.html#about" onclick="sideBarItemClose()" class="bar-item button">ABOUT</a>
+  <a href="index.html#team" onclick="sideBarItemClose()" class="bar-item button">TEAM</a>
+  <a href="index.html#work" onclick="sideBarItemClose()" class="bar-item button">WORK</a>
+  <a href="index.html#pricing" onclick="sideBarItemClose()" class="bar-item button">PRICING</a>
+  <a href="index.html#contact" onclick="sideBarItemClose()" class="bar-item button">CONTACT</a>
+</nav>
+    <!-- Footer -->
+    <footer class="center dark-grey padding-64">
+        <header class="padding-64 white"  > 
             <h3 class="text-24">Thanks for contacting. I will be in touch with you very soon.</h3>
         </header>
-        <footer class="content padding-64 text-light-grey center">
-            <p class="text-24">
-                    &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Keith Heffington
-            </p>
-            <div class="text-36">
-                <!-- <a href="https://www.facebook.com/keith.heffington" target="_blank"><i class="fab fa-facebook-square hover-opacity"></i></a> -->
-                <!-- <a href="https://twitter.com/BarBarousBofur" target="_blank"><i class="fab fa-twitter-square hover-opacity"></i></a> -->
-                <a href="https://github.com/bofur24" target="_blank"><i class="fab fa-github-square hover-opacity"></i></a>
-                <a href="https://www.linkedin.com/in/keith-heffington/"><i class="fab fa-linkedin hover-opacity"></i></a>
-            </div>
-        </footer>
-    </div>
+      <div class="xxlarge section">
+        <a href="https://github.com/bofur24" target="_blank"><i class="fa fa-github hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/in/keith-heffington/"><i class="fa fa-linkedin hover-opacity"></i></a>
+      </div>
+    </footer>
+
+
+
+    <script>
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function sideBarOpen() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+    // Close the sidebar with the close button
+    function sideBarItemClose() {
+        mySidebar.style.display = "none";
+    }
+    </script>
 </body>
    
 <?php
